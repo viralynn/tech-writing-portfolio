@@ -4,6 +4,8 @@
  * work well for content-centric websites.
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
   /* Cyan: fills (hero banner, buttons), with dark text on top */
@@ -28,6 +30,7 @@
   --ifm-font-color-base: #031517;
 
   --ifm-code-font-size: 95%;
+  --ifm-heading-font-family: 'Lora', Georgia, 'Times New Roman', serif;  
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -52,4 +55,8 @@
   --ifm-font-color-base: #e8fafc;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
 }
