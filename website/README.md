@@ -1,43 +1,24 @@
 # Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Source for the portfolio site at https://viralynn.github.io/tech-writing-portfolio/, built with [Docusaurus](https://docusaurus.io/).
 
-## Installation
-
-```bash
-npm install
-```
-
-**Note**: feel free to use the package manager of your choice.
-
-## Local Development
+## Install
 
 ```bash
-npm run start
+npm ci
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+`npm ci` installs exactly the versions pinned in `package-lock.json`.
 
-## Build
+## Preview locally
 
 ```bash
 npm run build
+npm run serve
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Then open http://localhost:3000/tech-writing-portfolio/. Press Ctrl+C to stop the server.
 
 ## Deployment
 
-Using SSH:
-
-```bash
-USE_SSH=true npm run deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Every push to `main` runs the workflow in `.github/workflows/deploy.yml`. It installs dependencies with `npm ci`, builds the site with `npm run build` (Node 22), and publishes `website/build` to GitHub Pages. There is no separate deploy command: pushing to `main` publishes the site.
