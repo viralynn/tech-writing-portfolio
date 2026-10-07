@@ -98,56 +98,45 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/viralynn',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://www.linkedin.com/in/viralynn',
+            label: 'LinkedIn',
             position: 'right',
           },
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Docs',
-                to: '/docs/doubtqueue-api-reference',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        links:
+              [
+                {
+                  title: 'Portfolio',
+                  items: [
+                    {
+                      label: 'DoubtQueue API Reference',
+                      to: '/docs/doubtqueue-api-reference',
+                    },
+                  ],
+                },
+                {
+                  title: 'Connect',
+                  items: [
+                    {
+                      label: 'GitHub',
+                      href: 'https://github.com/viralynn',
+                    },
+                    {
+                      label: 'LinkedIn',
+                      href: 'https://www.linkedin.com/in/viralynn',
+                    },
+                  ],
+                },
+              ],
+        copyright: `Copyright © ${new Date().getFullYear()} Vira Lynn. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
