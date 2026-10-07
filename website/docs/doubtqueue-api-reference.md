@@ -28,7 +28,36 @@ composer start
 
 The API is then available at `http://localhost:8000`. All examples on this page use that address.
 
-Some examples change data, so the response you get depends on the requests you sent before. Ids and timestamps also differ from the samples on this page. To start again with the sample data, stop the server and delete `backend/data/doubtqueue.sqlite`. Start the server again. It creates the database and the sample data on the first request.
+Some examples change data, so the response you get depends on the requests you sent before. To get the results shown on this page, follow [Run the examples in order](#run-the-examples-in-order). Ids and timestamps also differ from the samples on this page. To start again with the sample data, stop the server and delete `backend/data/doubtqueue.sqlite`. Start the server again. It creates the database and the sample data on the first request.
+
+## Run the examples in order
+
+The examples on this page are grouped by endpoint, not in the order you should run them. To get the results shown here, start with a fresh database and run the examples in the order below.
+
+First, run the examples that only read data. They change nothing, so you can run them in any order. These are all the examples in these sections:
+
+- List sessions
+- Get a session
+- List the queue
+- Get session statistics
+- Get a doubt
+
+Then run the examples that change data, in this order:
+
+| Order | Section | Example to run |
+|-------|---------|----------------|
+| 1 | Create a session | The example request, then the example with an empty body |
+| 2 | Add a doubt to a session | The example with an empty body |
+| 3 | Take the next doubt | The empty queue example, which uses session 3 |
+| 4 | Add a doubt to a session | The example request, then the example for a closed session |
+| 5 | Take the next doubt | The example request. It returns doubt 1. |
+| 6 | Mark a doubt as solved | All three examples |
+| 7 | Take the next doubt | The example request again. It returns doubt 2, which the skipped examples need. |
+| 8 | Mark a doubt as skipped | All three examples |
+| 9 | Close a session | All three examples |
+| 10 | Take the next doubt | The closed sessions example. It returns doubt 3. |
+
+If an example gives a different result, reset the database and start again.
 
 ## Conventions
 
@@ -562,7 +591,7 @@ The response is the doubt. Its `status` is `IN_PROGRESS`, `started_at` is set, a
 
 You can take a doubt from a closed session. The request succeeds if a doubt is still waiting. This is different from adding a doubt, which returns 409 for a closed session.
 
-The request below was sent after session 1 was closed (see [Close a session](#close-a-session)). It returned the next waiting doubt, doubt 3, with status `200 OK`:
+Run the request below after you close session 1 (see [Close a session](#close-a-session)). It returns the next waiting doubt, doubt 3, with status `200 OK`:
 
 ```bash
 curl -i -X POST http://localhost:8000/api/sessions/1/next
