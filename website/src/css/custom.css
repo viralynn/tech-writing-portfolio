@@ -6,25 +6,50 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Cyan: fills (hero banner, buttons), with dark text on top */
+  --ifm-color-primary: #23d9e7;
+  --ifm-color-primary-dark: #20c8d5;
+  --ifm-color-primary-darker: #1fbfcb;
+  --ifm-color-primary-darkest: #1aa1ab;
+  --ifm-color-primary-light: #35dce9;
+  --ifm-color-primary-lighter: #3ddeea;
+  --ifm-color-primary-lightest: #5ae2ed;
+  --ifm-color-primary-contrast-foreground: #031517;
+
+  /* Purple: links and active menu items */
+  --ifm-link-color: #7a2fd0;
+  --ifm-link-hover-color: #6a22bb;
+  --ifm-menu-color-active: #7a2fd0;
+  --ifm-navbar-link-hover-color: #7a2fd0;
+
+  /* Page */
+  --ifm-background-color: #f1fdfe;
+  --ifm-background-surface-color: #f1fdfe;
+  --ifm-font-color-base: #031517;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #18cfdc;
+  --ifm-color-primary-dark: #16beca;
+  --ifm-color-primary-darker: #15b6c2;
+  --ifm-color-primary-darkest: #1299a3;
+  --ifm-color-primary-light: #2ad3df;
+  --ifm-color-primary-lighter: #34d5e0;
+  --ifm-color-primary-lightest: #52dbe5;
+  --ifm-color-primary-contrast-foreground: #010d0e;
+
+  --ifm-link-color: #a28cf2;
+  --ifm-link-hover-color: #b5a3f5;
+  --ifm-menu-color-active: #a28cf2;
+  --ifm-navbar-link-hover-color: #a28cf2;
+
+  --ifm-background-color: #010d0e;
+  --ifm-background-surface-color: #010d0e;
+  --ifm-font-color-base: #e8fafc;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
