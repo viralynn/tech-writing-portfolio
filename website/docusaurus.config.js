@@ -86,7 +86,7 @@ const config = {
         title: 'Vira Lynn',
         logo: {
           alt: 'Vira Lynn: Technical Writing Portfolio icon',
-          src: 'img/logo.svg',
+          src: 'img/logo-vl-lora.svg',
         },
         items: [
           {
