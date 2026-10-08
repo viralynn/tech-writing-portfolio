@@ -21,3 +21,20 @@
   align-items: center;
   justify-content: center;
 }
+
+.docsButton {
+  background-color: var(--ifm-link-color);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.docsButton:hover {
+  background-color: var(--ifm-link-hover-color);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .docsButton,
+[data-theme='dark'] .docsButton:hover {
+  color: var(--ifm-color-primary-contrast-foreground);
+}

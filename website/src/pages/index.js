@@ -18,9 +18,9 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/doubtqueue-api-reference">
-            DoubtQueue API Reference
+            className={clsx('button button--lg', styles.docsButton)}
+            to="/docs/samples">
+            View Documentation Samples
           </Link>
         </div>
       </div>

@@ -89,11 +89,11 @@ const config = {
           src: 'img/logo-vl-lora.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
-            position: 'left',
+         {
+            to: '/docs/samples',
             label: 'Docs',
+            position: 'left',
+            activeBasePath: 'docs',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -119,6 +119,10 @@ const config = {
                       label: 'DoubtQueue API Reference',
                       to: '/docs/doubtqueue-api-reference',
                     },
+                    {
+                      label: 'DoubtQueue README Features',
+                      to: '/docs/doubtqueue-readme-features',
+                    },                    
                   ],
                 },
                 {
